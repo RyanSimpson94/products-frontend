@@ -1,6 +1,6 @@
 <template>
   <main id="app">
-    <label for="group" class="block font-bold">
+    <label for="group" class="block">
       <span class="text-sm">Group by type</span>
       <input id="group" class="ml-2" type="checkbox" v-model="groupByType" />
     </label>
@@ -8,7 +8,7 @@
     <section v-else>
       <div v-for="(group, index) in products" :key="index" class="my-6">
         <h2 class="font-bold my-2">{{ group[0] }}</h2>
-        <product-table :data="group[1]" :show-type="false"></product-table>
+        <product-table :data="group[1]" :show-type="false" v-if="group[1]"></product-table>
       </div>
     </section>
   </main>
