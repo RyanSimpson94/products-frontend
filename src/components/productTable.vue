@@ -50,7 +50,7 @@
     },
     data() {
       return {
-        sortDir: SortDirection.Descending,
+        sortDir: SortDirection.Ascending,
       }
     },
     computed: {

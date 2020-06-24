@@ -16,6 +16,7 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+import SortDirection from './constants/sorting';
 
 export default {
   name: "App",
@@ -45,7 +46,7 @@ export default {
     }
   },
   mounted() {
-    this.loadProducts();
+    this.loadProducts(SortDirection.Ascending);
   }
 };
 </script>
